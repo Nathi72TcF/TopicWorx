@@ -1,0 +1,110 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.cal-modal {
+    --height: 80%;
+    --border-radius: 10px;
+    padding: 25px;
+}
+
+ion-action-sheet.my-custom-class {
+    --background: #4c8fa3;
+    --backdrop-opacity: 0.6;
+    --button-background-selected: #275765;
+    --button-color: #000000;
+    --color: #fff;
+    /* role: "destructive" button iOS styling override */
+    --ion-color-danger: #000000;
+  }
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .action-sheet-group .action-sheet-has-icons .icon .tcf {
+    background: #4c8fa3 !important;
+    color: #4c8fa3 !important;
+  }
+
+  .menu-border-top {
+    // background: red !important;
+      color: #4c8fa3 !important;
+      ion-icon {
+        color: #4c8fa3 !important;
+      }
+      ion-header {
+        color: #4c8fa3 !important;
+      }
+  }
+
+  .bshadow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // filter: drop-shadow(5px 5px 5px #222222);
+    // opacity: .5;
+    
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @font-face {
+    font-family: 'Plex';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/IBMPlexSans-Regular.ttf');
+  }
+   
+  @font-face {
+    font-family: 'Plex';
+    font-weight: bold;
+    src: url('/assets/fonts/IBMPlexSans-Bold.ttf');
+  }
+   
+  :root {
+      --ion-text-color: #828585;
+      --ion-font-family: 'Plex';
+  }
+
+  .rating {
+    ion-icon {
+      color: gray;
+  
+      &.filled {
+        color: #4c8fa3;
+      }
+    }
+  }
+
+  @media screen {
+    ion-toast.toast-custom-class {
+      --border-radius: 30px !important;
+      --text-align: center !important;
+      --background-color: #676767 !important;
+      text-align: center;
+      font-family: Verdana;
+    }
+  }

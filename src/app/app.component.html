@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle><br>
+          <!-- <ion-label (click)="Logout()" style="color: red; padding-left: 65px;">Log out</ion-label> -->
+        </ion-list>
+      </ion-content>
+      <ion-footer>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon color="primary" slot="icon-only" size="large" name="cog-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-title color="primary">TopicWorx V1.1.1</ion-title>
+
+          <ion-buttons slot="end">
+            <ion-button (click)="toggleDarkTheme()">
+              <ion-icon color="primary" slot="icon-only" name="moon-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
