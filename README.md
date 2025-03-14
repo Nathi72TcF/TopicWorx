@@ -144,7 +144,7 @@ This project visualizes COVID-19 data using various chart types with Chart.js in
     ]
     ```
 
-2. Add the following canvas elements in `chart.page.html`:
+2. Add the following canvas elements in `home.page.html`:
 
     ```html
     <canvas id="lineChart" width="400" height="400"></canvas>
